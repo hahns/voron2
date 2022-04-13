@@ -1,0 +1,15 @@
+armbian-add-overlay <overlay_file.dts>
+
+resonance testing without klipper numpy being built:
+
+TEST_RESONANCES AXIS=X OUTPUT=raw_data
+
+~/klipper/scripts/calibrate_shaper.py /tmp/raw_data_x_ZZZ.csv -o /tmp/raw_data_x.png
+
+Temp increase swap size, will no survive reboot:
+# swapoff /dev/zram1
+# zramctl --reset /dev/zram1
+# zramctl --find --size 1024M
+/dev/zram1
+# mkswap /dev/zram1
+# swapon /dev/zram1
