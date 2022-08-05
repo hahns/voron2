@@ -8,3 +8,5 @@ make menuconfig
 make
 ./scripts/flash-sdcard.sh /dev/ttyACM0 spider-fystec
 sudo service klipper start
+
+# umbilical is a remix of: https://www.thingiverse.com/thing:5400946
