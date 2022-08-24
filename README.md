@@ -16,4 +16,10 @@ resonance testing without klipper numpy being built with pip:
 3. ~/klipper/scripts/calibrate_shaper.py /tmp/raw_data_x_ZZZ.csv -o /tmp/raw_data_x.png
 4. ~/klipper/scripts/calibrate_shaper.py /tmp/raw_data_y_ZZZ.csv -o /tmp/raw_data_y.png
 
+fix corrupt repo (emtpy git objects)
+
+1. find .git/objects/ -type f -empty | xargs rm
+2. git fetch -p
+3. git fsck --full
+
 ## umbilical is a remix of: https://www.thingiverse.com/thing:5400946
