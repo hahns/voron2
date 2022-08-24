@@ -8,4 +8,12 @@
 6. ./scripts/flash-sdcard.sh /dev/ttyACM0 fysetc-spider
 7. sudo service klipper start
 
+resonance testing without klipper numpy being built with pip:
+
+1. TEST_RESONANCES AXIS=X OUTPUT=raw_data
+2. TEST_RESONANCES AXIS=X OUTPUT=raw_data
+
+3. ~/klipper/scripts/calibrate_shaper.py /tmp/raw_data_x_ZZZ.csv -o /tmp/raw_data_x.png
+4. ~/klipper/scripts/calibrate_shaper.py /tmp/raw_data_y_ZZZ.csv -o /tmp/raw_data_y.png
+
 ## umbilical is a remix of: https://www.thingiverse.com/thing:5400946
